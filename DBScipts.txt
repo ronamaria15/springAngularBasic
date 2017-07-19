@@ -1,0 +1,12 @@
+CREATE DATABASE  IF NOT EXISTS `userMgr`
+use userMgr;
+
+DROP TABLE IF EXISTS `users`;
+create table users(id int(11) not null auto_increment, firstName varchar(100) not null, lastName varchar(100) not null, dob DATETIME,PRIMARY KEY (`id`));
+
+insert into users values(1,'Rona','Maria', '1991-04-15')
+insert into users (firstName,lastName,dob)values('Cicy','Elsa', '1991-10-05')
+insert into users values(3,'Naveen','Sabesan', '1989-09-22')
+
+select * from users;
+delete from users where id in (43)
